@@ -13,19 +13,48 @@
  <% include ../partials/nav %>
 
 <br>
-    <h1>Register as an Investor</h1>
-    <br>
-    <form method="post">
-        <label for="investorUserName">Investor User Name:</label>
-        <input type="text" id="investorUserName" name="investorUserName"><br><br>
-        <label for="investorUserEmail">Investor Email:</label>
-        <input type="email" id="investorUserEmail" name="investorUserEmail"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <label for="investorDisplayName">Investor Display Name:</label>
-        <input type="text" id="investorDisplayName" name="investorDisplayName"><br><br>
-        <input type="submit" value="Register">
-    </form>
+   <main class="container">
+   
+ 
+     <div class="row">
+         <div class="offset-md-0 col md-0">
+             <h1>Please Register</h1>
+             <form method="POST" autocomplete="off">
+                     <fieldset class="form-group">
+                        <label for="investorUserName">Investor Username: </label>
+                        <input type="text" class="form-control"
+                        name="investorUserName" placeholder="Enter your Investor username" 
+                        id="investorUserName" required autofocus>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-control"
+                        name="password" placeholder="Enter password" 
+                        id="password" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="investorUserEmail">Investor Email: </label>
+                        <input type="email" class="form-control"
+                        name="investorUserEmail" placeholder="Enter your Investor Email Address" 
+                        id="investorUserEmail" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="investorDisplayName">Investor Display Name: </label>
+                        <input type="text" class="form-control"
+                        name="investorDisplayName" placeholder="Enter your Investor Display Name" 
+                        id="investorDisplayName" required>
+                    </fieldset>
+                    <br>
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Register">
+                        <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                        </a>
+                    </fieldset>
+             </form>
+         </div>
+     </div>
+</main>
 
     <br>
 <a href="/investorLogin">Login</a>

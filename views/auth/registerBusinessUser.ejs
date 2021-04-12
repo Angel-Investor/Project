@@ -8,19 +8,48 @@
 </head>
   <% include ../partials/nav %>
 
-        <h1>Register as a Business</h1>
-    <br>
-  <form method="post">
-  <label for="businessUserName">Business User Name:</label>
-  <input type="text" id="businessUserName" name="businessUserName"><br><br>
-  <label for="businessUserEmail">Business User Email:</label>
-  <input type="email" id="businessUserEmail" name="businessUserEmail"><br><br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password"><br><br>
-  <label for="businessDisplayName">Business Display Name:</label>
-  <input type="text" id="businessDisplayName" name="businessDisplayName"><br><br>
-  <input type="submit" value="Submit">
-  </form>
+   <main class="container">
+   
+ 
+     <div class="row">
+         <div class="offset-md-0 col md-0">
+             <h1>Please Register</h1>
+             <form method="POST" autocomplete="off">
+                     <fieldset class="form-group">
+                        <label for="businessUserName">Business Username: </label>
+                        <input type="text" class="form-control"
+                        name="businessUserName" placeholder="Enter your Business username" 
+                        id="businessUserName" required autofocus>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-control"
+                        name="password" placeholder="Enter password" 
+                        id="password" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="businessUserEmail">Business Email: </label>
+                        <input type="email" class="form-control"
+                        name="businessUserEmail" placeholder="Enter your Business Email Address" 
+                        id="businessUserEmail" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="businessDisplayName">Business Display Name: </label>
+                        <input type="text" class="form-control"
+                        name="businessDisplayName" placeholder="Enter your Business Display Name" 
+                        id="businessDisplayName" required>
+                    </fieldset>
+                    <br>
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Register">
+                        <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                        </a>
+                    </fieldset>
+             </form>
+         </div>
+     </div>
+</main>
   <br>
 <a href="/businessLogin">Login</a>
 <br>

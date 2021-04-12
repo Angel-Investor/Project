@@ -10,28 +10,59 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
-    <% include ./partials/nav %>
+<% include ./partials/nav %>
 
-<br>
-<hr>
+    <h1 class="center">Welcome to Angel's Investment</h1>
+
+    <hr>
     <% include ./partials/messages %>
+        <hr>
+        <div>
+            <h3 class="center welcomeMessageh1">Business or Investor User: Please Login Here</h3>
+            <p class="center">
+                <a href="/businessLogin"><button type="button" class="btn btn-primary">Click Here to Login as a Business</button></a>
+            </p>
+            <p class="center">
+                <a href="/investorLogin"><button type="button" class="btn btn-primary">Click Here to Login as an Investor</button></a>
+            </p>
+        </div>
+        <hr>
+        <fieldset>
+            <hr>
+            <div>
+                <h3 class="center welcomeMessageh1">Dont have a Business or Investor account yet?</h3>
+                <p class="center">
+                    <a href="/users/add-business-user"><button type="button" class="btn btn-primary">Click Here to Register as a Business</button></a>
+                </p>
+                <p class="center">
+                    <a href="/users/add-investor-user"><button type="button" class="btn btn-primary">Click Here to Register as an Investor</button></a>
+                </p>
+            </div>
+        </fieldset>
 
-    <hr>
-    <ul>
-        <li><a href="/investorLogin">Investor's Login Page</a></li>
-        <li><a href="/businessLogin">Business' Login Page</a></li>
-    </ul>
+        <h6> Admin Login</h6>
+        <form method="POST" autocomplete="off">
+            <fieldset>
+                <label for="adminUserName">Username: </label>
+                <input type="text" name="adminUserName" placeholder="Enter username" id="adminUserName" required autofocus>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="password">Password : </label>
+                <input type="password" name="password" placeholder="Enter password" id="password" required>
+            </fieldset>
 
-    <hr>
-    <h1>Admin Login</h1>
-    <form method="post">
-        <label for="adminUserName">User Name:</label>
-        <input type="text" id="adminUserName" name="adminUserName"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-<!-- Bottom Nav -->
-    <% include ./partials/footer %>
+            <fieldset>
+                <br>
+                <div>
+                    <input type="submit" value="Login">
+                    <a href="/">
+                        <input type="button" value="Cancel">
+                    </a>
+                </div>
+            </fieldset>
+        </form>
+        <!-- Bottom Nav -->
+        <% include ./partials/footer %>
 
 </html>
