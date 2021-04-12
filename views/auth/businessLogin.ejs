@@ -11,35 +11,46 @@
 </head>
 
  <% include ../partials/nav %>
-
-    <h1>Welcome to
-        <%= title %>
-    </h1>
     <br>
-    <hr>
     <% include ../partials/messages %>
-    <hr>
       <br>
-<a href="/">Home Page</a>
-<br>
-    <hr>
-    <h1>Business Login</h1>
-    <form method="post">
-        <label for="businessUserName">Business User Name:</label>
-        <input type="text" id="businessUserName" name="businessUserName"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-    <hr>
-    <ul>
-        <li><a href="/users/add-business-user">Register as a Business</a></li>
-    </ul>
-    <hr>
-    <ul>
-        <li><a href="investor/display-investor-posts">Display Investor Posts</a></li>
-    </ul>
+<main class="bodyStyle">
+            <div class="row">
+                <div class="offset-md-4 col-md-4">
+                    <h2 class="center">Business Login</h2>
+                    <form method="POST" autocomplete="off">
+                        <fieldset class="form-group">
+                            <label for="businessUserName">Username: </label>
+                            <input type="text" class="form-control" name="businessUserName" placeholder="Enter Business Username" id="username" required autofocus>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label for="password">Password: </label>
+                            <input type="password" class="form-control" name="password" placeholder="Enter password" id="password" required>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <br>
+                            <div class="center">
+                                <input type="submit" class="btn btn-success" value="Login">
+                                <a href="/">
+                                    <input type="button" class="btn btn-warning" value="Cancel">
+                                </a>
+                            </div>
+                            <hr>
+                            <div>
+                                <p class="center">
+                                    <a href="/users/add-business-user"><button type="button" class="btn btn-primary">Register as a Business</button></a>
+                                </p>
+                                <p class="center">
+                                    <a href="investor/display-investor-posts"><button type="button" class="btn btn-primary">Click Here to Display Investor Posts</button></a>
+                                </p>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        <br>
+    </main>
      <% include ../partials/footer %>
-
-
 </html>

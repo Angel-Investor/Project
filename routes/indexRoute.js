@@ -17,6 +17,12 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Home Page' });
 });
 
+router.get('/contact', function(req, res, next) {
+    res.render('contact', { title: 'Contact Page' });
+});
+
+
+
 //Admin Login POST Request
 router.post('/', function(req, res, next) {
     passport.authenticate('adminLocal', {
