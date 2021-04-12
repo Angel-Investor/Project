@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+ <% include ../partials/nav %>
+
+    <h1>Welcome to
+        <%= title %>
+    </h1>
+    <br>
+    <hr>
+    <% include ../partials/messages %>
+    <hr>
+      <br>
+<a href="/">Home Page</a>
+<br>
+    <hr>
+    <h1>Business Login</h1>
+    <form method="post">
+        <label for="businessUserName">Business User Name:</label>
+        <input type="text" id="businessUserName" name="businessUserName"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <ul>
+        <li><a href="/users/add-business-user">Register as a Business</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <li><a href="investor/display-investor-posts">Display Investor Posts</a></li>
+    </ul>
+     <% include ../partials/footer %>
+
+
+</html>
