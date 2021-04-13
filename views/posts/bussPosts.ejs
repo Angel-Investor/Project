@@ -16,19 +16,19 @@
     </h1>
        <table class="table">
         <thead>
-            <th class="table">Title</th>
-            <th class="table">Email</th>
-            <th class="table">Content</th>
+            <th >Title</th>
+            <th >Email</th>
+            <th >Content</th>
         </thead>
         <% for(let count = 0; count < businessPostsList.length; count++){%>
             <tbody>
-                <td class="table">
+                <td >
                     <%= businessPostsList[count].businessPostTitle%>
                 </td>
-                <td class="table">
+                <td >
                     <%= businessPostsList[count].businessPostEmail%>
                 </td>
-                <td class="table">
+                <td >
                     <%= businessPostsList[count].businessPostBody%>
                 </td>
             </tbody>
