@@ -10,14 +10,12 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
- <% include ../partials/nav %>
+<% include ../partials/nav %>
 
-    <h1>
+    <h1 class="welcomeMessageh1">
         <%= title %>
     </h1>
-    <br>
-    <a href="/">Home Page</a>
-    <br>
+
     <table class="table">
         <thead>
             <th class="table">Title</th>
@@ -42,13 +40,14 @@
             </tbody>
             <% } %>
     </table>
+    <br>
+    <p>
+        <a href="./add-business-post"><button type="button" class="btn btn-primary">Add a Business Post</button></a>
+    </p>
+    <p>
+        <a href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+    </p>
 
-    <br>
-    <a href="./add-business-post">Add a Business Post</a>
-    <br>
-    <br>
-    <a href="/logout">Logout</a>
-<br>
-<% include ../partials/footer %>
+    <% include ../partials/footer %>
 
 </html>
