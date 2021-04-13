@@ -34,7 +34,7 @@ router.post('/', function(req, res, next) {
 
 //Get combined page - After Admin Logged In
 router.get("/combined", (req, res, next) => {
-    res.render("posts/combined", { title: "Combined Page" })
+    res.render("posts/combined", { title: "Admin Page" })
 });
 
 

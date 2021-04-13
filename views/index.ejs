@@ -12,12 +12,12 @@
 
 <% include ./partials/nav %>
     <br>
-    <h1 class="center">Welcome to Angel's Investment</h1>
+    <h1 class="center welcomeMessageh1">Welcome to Angel's Investment</h1>
     <br>
 
     <% include ./partials/messages %>
         <div>
-            <h3 class="center welcomeMessageh1">Business or Investor User: Please Login Here</h3>
+            <h3 class="center ">Business or Investor User: Please Login Here</h3>
             <p class="center">
                 <a href="/businessLogin"><button type="button" class="btn btn-primary">Click Here to Login as a Business</button></a>
             </p>
@@ -28,7 +28,7 @@
         <hr>
         <fieldset>
             <div>
-                <h3 class="center welcomeMessageh1">Dont have a Business or Investor account yet?</h3>
+                <h3 class="center ">Dont have a Business or Investor account yet?</h3>
                 <p class="center">
                     <a href="/users/add-business-user"><button type="button" class="btn btn-primary">Click Here to Register as a Business</button></a>
                 </p>
@@ -37,29 +37,31 @@
                 </p>
             </div>
         </fieldset>
-
-        <h6> Admin Login</h6>
-        <form method="POST" autocomplete="off">
-            <fieldset>
-                <label for="adminUserName">Username: </label>
-                <input type="text" name="adminUserName" placeholder="Enter username" id="adminUserName" required autofocus>
-            </fieldset>
-            <br>
-            <fieldset>
-                <label for="password">Password : </label>
-                <input type="password" name="password" placeholder="Enter password" id="password" required>
-            </fieldset>
-
-            <fieldset>
+        <div id="admin">
+            <h6> Admin Login</h6>
+            <form method="POST" autocomplete="off">
+                <fieldset>
+                    <label for="adminUserName">Username: </label>
+                    <input type="text" name="adminUserName" placeholder="Enter username" id="adminUserName" required autofocus>
+                </fieldset>
                 <br>
-                <div>
-                    <input type="submit" value="Login">
-                    <a href="/">
-                        <input type="button" value="Cancel">
-                    </a>
-                </div>
-            </fieldset>
-        </form>
+                <fieldset>
+                    <label for="password">Password : </label>
+                    <input type="password" name="password" placeholder="Enter password" id="password" required>
+                </fieldset>
+
+                <fieldset>
+                    <br>
+                    <div>
+                        <input type="submit" value="Login">
+                        <a href="/">
+                            <input type="button" value="Cancel">
+                        </a>
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
         <!-- Bottom Nav -->
         <% include ./partials/footer %>
 

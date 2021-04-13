@@ -12,18 +12,23 @@
 
  <% include ../partials/nav %>
 
-    <h1>
+    <h1 class="welcomeMessageh1">
         <%= title %>
     </h1>
-    <br>
-    <a href="/">Home Page</a>
-    <br>
-<a href="business/display-all-business-posts">All Business Posts</a>    
-<br>
-<a href="investor/display-all-investor-posts">All Investor Posts</a>    
-    <br>
-    <a href="/logout">Logout</a>
-<br>
+ 
+
+   <br>
+    <p class="center">
+        <a href="business/display-all-business-posts"><button type="button" class="btn btn-primary">All Business Posts</button></a>
+    </p>
+    <p class="center">
+        <a href="investor/display-all-investor-posts"><button type="button" class="btn btn-primary">All Investor Posts</button></a>
+    </p>
+    <p class="center">
+        <a href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+    </p>
+
+
 <% include ../partials/footer %>
 
 </html>
