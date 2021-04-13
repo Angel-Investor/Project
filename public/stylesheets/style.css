@@ -1,20 +1,47 @@
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunito-Regular.ttf") format("truetype");
+}
+
+*{
+    font-family: Nunito;
+}
+
+.navbar-custom {
+    background-color:rgb(46, 204, 113);
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+    font-family: Nunito;
+    font-size: 20px;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(41, 128, 185) !important;
+    border-color: rgb(41, 128, 185) !important;
+}
+.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
+    background-color: rgb(243, 156, 18) !important;
+    border-color: rgb(243, 156, 18) !important;
+}
+
 body {
     padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: rgb(208, 224, 247) !important;
+    font-size: 15px;
+    background-color: rgb(189, 195, 199) !important;
+    /* background-color: rgb(41, 128, 185) !important; */
 }
 
 a {
     color: #00B7FF;
 }
 
-.welcomeMessageh1 {
+/* .welcomeMessageh1 {
     text-align: center;
-    background-color: lavender;
-    /* background-color: rgb(208, 224, 247); */
     margin-top: 5px;
     margin-bottom: 5px;
-}
+} */
 
 .center {
     text-align: center;

@@ -6,63 +6,77 @@
         <%= title %>
     </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
-<% include ./partials/nav %>
-    <br>
-    <h1 class="center welcomeMessageh1">Welcome to Angel's Investment</h1>
-    <br>
-
-    <% include ./partials/messages %>
-        <div>
-            <h3 class="center ">Business or Investor User: Please Login Here</h3>
-            <p class="center">
-                <a href="/businessLogin"><button type="button" class="btn btn-primary">Click Here to Login as a Business</button></a>
-            </p>
-            <p class="center">
-                <a href="/investorLogin"><button type="button" class="btn btn-primary">Click Here to Login as an Investor</button></a>
-            </p>
-        </div>
-        <hr>
-        <fieldset>
-            <div>
-                <h3 class="center ">Dont have a Business or Investor account yet?</h3>
-                <p class="center">
-                    <a href="/users/add-business-user"><button type="button" class="btn btn-primary">Click Here to Register as a Business</button></a>
-                </p>
-                <p class="center">
-                    <a href="/users/add-investor-user"><button type="button" class="btn btn-primary">Click Here to Register as an Investor</button></a>
-                </p>
-            </div>
-        </fieldset>
-        <div id="admin">
-            <h6> Admin Login</h6>
-            <form method="POST" autocomplete="off">
-                <fieldset>
-                    <label for="adminUserName">Username: </label>
-                    <input type="text" name="adminUserName" placeholder="Enter username" id="adminUserName" required autofocus>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <label for="password">Password : </label>
-                    <input type="password" name="password" placeholder="Enter password" id="password" required>
-                </fieldset>
-
-                <fieldset>
-                    <br>
-                    <div>
-                        <input type="submit" value="Login">
-                        <a href="/">
-                            <input type="button" value="Cancel">
-                        </a>
+<body>
+    <% include ./partials/nav %>
+        <br>
+        <h2 class="center text-center">Welcome to Angel's Investment</h2>
+        <br>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <% include ./partials/messages %>
+                    <div class="col-6">
+                        <div class="card text-white bg-dark mb-3 shadow rounded justify-content-center"
+                            style="width: 60%; height: 20rem;">
+                            <div class="card-body">
+                                <h3 class="card-header center">Admin Login</h3>
+                                <form method="POST" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="adminUserName">Username: </label>
+                                        <input class="form-control" type="text" name="adminUserName"
+                                            placeholder="Enter username" id="adminUserName" required autofocus>
+                                    </div>
+                                    </br>
+                                    <div class="form-group">
+                                        <label for="password">Password : </label>
+                                        <input class="form-control" type="password" name="password"
+                                            placeholder="Enter password" id="password" required>
+                                    </div></br></br>
+                                    <div>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                        <a href="/">
+                                            <input class="btn btn-warning" type="button" value="Cancel">
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </fieldset>
-            </form>
-
+                    <div class="col-3">
+                        <div class="card text-white bg-dark mb-3 shadow rounded justify-content-center"
+                            style="width: auto; height: 10rem;">
+                            <h3 class="card-header center">User Login</h3>
+                            <p class="center">
+                                <a href="/businessLogin"><button type="button" class="btn btn-primary">
+                                        Business Login</button></a>
+                            </p>
+                            <p class="center">
+                                <a href="/investorLogin"><button type="button" class="btn btn-primary">
+                                    Investor Login</button></a>
+                            </p>
+                        </div>
+                        <div class="card text-white bg-dark mb-3 shadow rounded justify-content-center"
+                            style="width: auto; height: 10rem;">
+                            <h3 class="card-header center">User Registration</h3>
+                            <p class="center">
+                                <a href="/users/add-business-user"><button type="button" class="btn btn-primary">
+                                        Business Registration</button></a>
+                            </p>
+                            <p class="center">
+                                <a href="/users/add-investor-user"><button type="button" class="btn btn-primary">
+                                        Investor Registration</button></a>
+                            </p>
+                        </div>
+                    </div>
+            </div>
         </div>
         <!-- Bottom Nav -->
         <% include ./partials/footer %>
+</body>
 
 </html>
