@@ -18,25 +18,25 @@
 
     <table class="table">
         <thead>
-            <th class="table">Title</th>
-            <th class="table">Email</th>
-            <th class="table">Content</th>
-            <th class="table">Edit</th>
-            <th class="table">Delete</th>
+            <th>Title</th>
+            <th>Email</th>
+            <th>Content</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </thead>
         <% for(let count = 0; count < businessPostsList.length; count++){%>
             <tbody>
-                <td class="table">
+                <td>
                     <%= businessPostsList[count].businessPostTitle%>
                 </td>
-                <td class="table">
+                <td>
                     <%= businessPostsList[count].businessPostEmail%>
                 </td>
-                <td class="table">
+                <td>
                     <%= businessPostsList[count].businessPostBody%>
                 </td>
-                <td class="table"><a href="./edit-business-post/<%= businessPostsList[count]._id%>">Edit</a></td>
-                <td class="table"><a href="./delete-business-post/<%= businessPostsList[count]._id%>">Delete</a></td>
+                <td><a href="./edit-business-post/<%= businessPostsList[count]._id%>">Edit</a></td>
+                <td><a href="./delete-business-post/<%= businessPostsList[count]._id%>">Delete</a></td>
             </tbody>
             <% } %>
     </table>

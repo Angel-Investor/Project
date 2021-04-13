@@ -20,19 +20,19 @@
 
     <table class="table">
         <thead>
-            <th class="table">Title</th>
-            <th class="table">Email</th>
-            <th class="table">Content</th>
+            <th >Title</th>
+            <th >Email</th>
+            <th >Content</th>
         </thead>
         <% for(let count = 0; count < investorPostsList.length; count++){%>
             <tbody>
-                <td class="table">
+                <td >
                     <%= investorPostsList[count].investorPostTitle%>
                 </td>
-                <td class="table">
+                <td >
                     <%= investorPostsList[count].investorPostEmail%>
                 </td>
-                <td class="table">
+                <td >
                     <%= investorPostsList[count].investorPostBody%>
                 </td>
             </tbody>
