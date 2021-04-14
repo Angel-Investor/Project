@@ -18,12 +18,59 @@
  
 
    <br>
-    <p class="center">
-        <a href="business/display-all-business-posts"><button type="button" class="btn btn-primary">All Business Posts</button></a>
-    </p>
-    <p class="center">
-        <a href="investor/display-all-investor-posts"><button type="button" class="btn btn-primary">All Investor Posts</button></a>
-    </p>
+    <h1 class="welcomeMessageh1">Business Posts List</h1>
+
+    <table class="table">
+        <thead>
+            <th>Title</th>
+            <th>Email</th>
+            <th>Content</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <% for(let count = 0; count < businessResults.length; count++){%>
+            <tbody>
+                <td>
+                    <%= businessResults[count].businessPostTitle%>
+                </td>
+                <td>
+                    <%= businessResults[count].businessPostEmail%>
+                </td>
+                <td>
+                    <%= businessResults[count].businessPostBody%>
+                </td>
+                <td><a href="./edit-business-post/<%= businessResults[count]._id%>">Edit</a></td>
+                <td><a href="./delete-business-post/<%= businessResults[count]._id%>">Delete</a></td>
+            </tbody>
+            <% } %>
+    </table>
+    <br>
+    <h1 class="welcomeMessageh1">Investors Posts List</h1>
+    <table class="table">
+        <thead>
+            <th >Title</th>
+            <th >Email</th>
+            <th >Content</th>
+            <th >Edit</th>
+            <th >Delete</th>
+        </thead>
+        <% for(let count = 0; count < investorResults.length; count++){%>
+            <tbody>
+                <td >
+                    <%= investorResults[count].investorPostTitle%>
+                </td>
+                <td >
+                    <%= investorResults[count].investorPostEmail%>
+                </td>
+                <td >
+                    <%= investorResults[count].investorPostBody%>
+                </td>
+                <td ><a href="./edit-investor-post/<%= investorResults[count]._id%>">Edit</a></td>
+                <td ><a href="./delete-investor-post/<%= investorResults[count]._id%>">Delete</a></td>
+            </tbody>
+            <% } %>
+    </table>
+    
     <p class="center">
         <a href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
     </p>

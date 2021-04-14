@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
+const InvestorPost = require("../models/investorPostModel");
+const BusinessPost = require("../models/businessPostModel");
 
 
 // const ensureAuthenticated = function(req, res, next) {
@@ -34,7 +36,19 @@ router.post('/', function(req, res, next) {
 
 //Get combined page - After Admin Logged In
 router.get("/combined", (req, res, next) => {
-    res.render("posts/combined", { title: "Admin Page" })
+
+    BusinessPost.find().then((businessResults) => {
+        InvestorPost.find().then((investorResults) => {
+
+            res.render("posts/combined", {
+                title: "Admin Page",
+                businessResults: businessResults,
+                investorResults: investorResults
+            })
+        })
+
+    })
+
 });
 
 
