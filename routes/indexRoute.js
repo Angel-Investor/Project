@@ -42,6 +42,127 @@ router.get("/combined", (req, res, next) => {
 
 });
 
+//Edit Investor Post - GET Request
+router.get("/edit-investor-post/:id", (req, res, next) => {
+
+    let postId = req.params.id;
+
+    InvestorPost.findById(postId, {}, {}, (err, investorPostToEdit) => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+
+        } else {
+            res.render("posts/editInvestorPost", {
+                title: "Edit Investor Post",
+                investorPost: investorPostToEdit
+            })
+        }
+    });
+});
+
+//Edit Investor Post - POST Request
+router.post("/edit-investor-post/:id", (req, res) => {
+
+    let id = req.params.id;
+    let updatedInvestorPost = InvestorPost({
+        _id: id,
+        investorPostTitle: req.body.investorPostTitle,
+        investorPostEmail: req.body.investorPostEmail,
+        investorPostBody: req.body.investorPostBody
+    });
+    InvestorPost.updateOne({ _id: id }, updatedInvestorPost, err => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        } else {
+            res.redirect("/combined")
+        }
+    });
+});
+
+
+
+//Delete an Investor Post
+router.get("/delete-investor-post/:id", (req, res, next) => {
+
+    let investorPostId = req.params.id;
+    InvestorPost.remove({ _id: investorPostId }, err => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        } else {
+            res.redirect("/combined")
+        }
+    })
+
+});
+
+
+//Edit Business Post Get Request
+router.get("/edit-business-post/:id", (req, res, next) => {
+
+    let postId = req.params.id;
+
+    BusinessPost.findById(postId, {}, {}, (err, businessPostToEdit) => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+
+        } else {
+            res.render("posts/editBusinessPost", {
+                title: "Edit Business Post",
+                businessPost: businessPostToEdit
+            })
+        }
+    });
+});
+
+
+//Edit Business Post POST Request
+router.post("/edit-business-post/:id", (req, res, next) => {
+
+    let id = req.params.id;
+    let updatedBusinessPost = BusinessPost({
+        _id: id,
+        businessPostTitle: req.body.businessPostTitle,
+        businessPostEmail: req.body.businessPostEmail,
+        businessPostBody: req.body.businessPostBody
+
+    });
+
+    BusinessPost.updateOne({ _id: id }, updatedBusinessPost, err => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        } else {
+            res.redirect("/combined")
+        }
+    });
+});
+
+
+//Delete a Business Post
+router.get("/delete-business-post/:id", (req, res, next) => {
+    let id = req.params.id;
+    BusinessPost.remove({ _id: id }, err => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        } else {
+            res.redirect("/combined");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
 
 //Investor login - GET Request
 router.get("/investorLogin", (req, res, next) => {

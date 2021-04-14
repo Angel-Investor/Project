@@ -39,8 +39,8 @@
                 <td>
                     <%= businessResults[count].businessPostBody%>
                 </td>
-                <td><a href="/business/edit-business-post/<%= businessResults[count]._id%>">Edit</a></td>
-                <td><a href="/business/delete-business-post/<%= businessResults[count]._id%>">Delete</a></td>
+                <td><a href="/edit-business-post/<%= businessResults[count]._id%>">Edit</a></td>
+                <td><a href="/delete-business-post/<%= businessResults[count]._id%>">Delete</a></td>
             </tbody>
             <% } %>
     </table>
@@ -65,8 +65,8 @@
                 <td >
                     <%= investorResults[count].investorPostBody%>
                 </td>
-                <td ><a href="/investor/edit-investor-post/<%= investorResults[count]._id%>">Edit</a></td>
-                <td ><a href="/investor/delete-investor-post/<%= investorResults[count]._id%>">Delete</a></td>
+                <td ><a href="/edit-investor-post/<%= investorResults[count]._id%>">Edit</a></td>
+                <td ><a href="/delete-investor-post/<%= investorResults[count]._id%>">Delete</a></td>
             </tbody>
             <% } %>
     </table>
