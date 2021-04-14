@@ -36,9 +36,11 @@
                     <br>
                     <div class="form-group text-right">
                       <input type="submit" class="btn btn-primary" value="Edit Post">
-                       <a href="/business/display-all-business-posts">
-                                            <input class="btn btn-warning" type="button" value="Cancel">
-                                        </a>
+                      <% if( title === "Business Posts"){ %>
+                       <a href="/business/display-all-business-posts"><input class="btn btn-warning" type="button" value="Cancel"></a>
+                       <%} else { %>
+                       <a href="/combined"><input class="btn btn-warning" type="button" value="Cancel"></a>
+                      <%}%>
                     </div>
                   </form>
               </div>
