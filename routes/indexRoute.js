@@ -5,15 +5,6 @@ const InvestorPost = require("../models/investorPostModel");
 const BusinessPost = require("../models/businessPostModel");
 
 
-// const ensureAuthenticated = function(req, res, next) {
-//     if (req.isAuthenticated()) {
-//         return next();
-//     }
-//     req.flash('error_msg', 'Please log in to view that resource');
-//     res.redirect('/');
-// }
-
-
 /* Home Page - ADMIN LOGIN PAGE */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Home Page' });
