@@ -17,6 +17,7 @@ const BusinessPost = require("../models/businessPostModel");
 router.get("/display-business-posts", (req, res, err) => {
     BusinessPost.find().then((result) => {
 
+
         res.render("posts/bussPosts", {
             title: "Business Posts",
             businessPostsList: result
@@ -96,7 +97,7 @@ router.post("/edit-business-post/:id", (req, res, next) => {
             console.log(err);
             res.end(err);
         } else {
-            res.redirect("./../display-business-posts")
+            res.redirect("./../display-all-business-posts")
         }
     });
 });
@@ -110,7 +111,7 @@ router.get("/delete-business-post/:id", (req, res, next) => {
             console.log(err);
             res.end(err);
         } else {
-            res.redirect("./../display-business-posts");
+            res.redirect("./../display-all-business-posts");
         }
     });
 });
