@@ -2,16 +2,6 @@ var express = require('express');
 var router = express.Router();
 const InvestorPost = require("../models/investorPostModel");
 
-
-// const ensureAuthenticated = function(req, res, next) {
-//     if (req.isAuthenticated()) {
-//         return next();
-//     }
-//     req.flash('error_msg', 'Please log in to view that resource');
-//     res.redirect('/');
-// }
-
-
 //Display INVESTOR Posts Without being logged in
 router.get("/display-investor-posts", (req, res, err) => {
     InvestorPost.find().then((result) => {
@@ -53,7 +43,7 @@ router.post("/add-investor-post", (req, res, next) => {
 
     newInvestorPost.save()
         .then((result) => res.redirect("./display-all-investor-posts"))
-        .catch((err) => console.log(err))
+        .catch((err) => res.redirect("./display-all-investor-posts"))
 });
 
 //Edit Investor Post - GET Request
