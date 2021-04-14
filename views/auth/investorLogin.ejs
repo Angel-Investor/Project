@@ -10,49 +10,57 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
- <% include ../partials/nav %>
-      <br>
-<main class="bodyStyle">
-           
-            <div class="row">
-                <div class="offset-md-4 col-md-4">
-                    <h2 class="center">Investor Login</h2>
+<body>
+    <% include ../partials/nav %>
+        <br>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <% include ../partials/messages %>
+                    <br>
+                    <div class="col-9">
+                        <div class="card text-white bg-dark mb-3 shadow rounded justify-content-center"
+                            style="width: 100%; height: 20rem;">
+                            <div class="card-body">
+                                <h3 class="card-header center">Investor Login</h3>
                     <form method="POST" autocomplete="off">
-                        <fieldset class="form-group">
+                        <div class="form-group">
                             <label for="investorUserName">Username: </label>
                             <input type="text" class="form-control" name="investorUserName" placeholder="Enter investor Username" id="username" required autofocus>
-                        </fieldset>
-
-                        <fieldset class="form-group">
+                        </div><br>
+                        <div class="form-group">
                             <label for="password">Password: </label>
-                            <input type="password" class="form-control" name="password" placeholder="Enter password" id="password" required>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                            <br>
-                            <div class="center">
-                                <input type="submit" class="btn btn-success" value="Login">
-                                <a href="/">
-                                    <input type="button" class="btn btn-warning" value="Cancel">
-                                </a>
-                            </div>
-                            <hr>
-                            <div>
-                                <p class="center">
-                                    <a href="/users/add-investor-user"><button type="button" class="btn btn-primary">Register as a investor</button></a>
-                                </p>
-                                <p class="center">
-                                    <a href="business/display-business-posts"><button type="button" class="btn btn-primary">Click Here to Display Business Posts</button></a>
-                                </p>
-                            </div>
-                        </fieldset>
+                            <input type="password" class="form-control" name="password"
+                                placeholder="Enter password" id="password" required>
+                        </div></br></br>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="/">
+                                <input class="btn btn-warning" type="button" value="Cancel">
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>
-        <br>
-    </main>
-
-     <% include ../partials/footer %>
-
+        </div>
+        <div class="col-3">
+            <div class="card text-white bg-dark mb-3 shadow rounded justify-content-center"
+                style="width: auto; height: 20rem;">
+                <h3 class="card-header center">Other Options</h3><br>
+                <p class="center">
+                    <a href="/users/add-investor-user"><button type="button"
+                            class="btn btn-primary">Register as a Investor</button></a>
+                </p><br>
+                <p class="center">
+                    <a href="business/display-business-posts"><button type="button"
+                            class="btn btn-primary">
+                            Display Business Posts</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <% include ../partials/footer %>
+</div>
+</body>
 
 </html>
